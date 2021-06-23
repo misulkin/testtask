@@ -1,0 +1,95 @@
+.item {
+    width: calc((100% - 15rem) / 5);
+    /*тут исправил*/
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__discrip {
+
+        width: 58px;
+        padding: 6px 10px;
+        border-radius: 0px 0px 30px 0px / 0px 0px 26px 0px;
+    }
+
+    .item-sale {
+        background-color: #FF0327;
+        color: white;
+    }
+
+    .item-new {
+        background-color: #FFD400;
+    }
+
+    .item-hidden {
+        visibility: hidden;
+    }
+
+    &__img {
+
+        width: 100%;
+        margin: auto;
+
+        &:before {
+            content: "";
+            padding-bottom: 84%;
+            float: left;
+        }
+
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
+
+    }
+
+    &__class {
+        color: #D5D5D5;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-size: 14px;
+        display: block;
+        width: 95%;
+        height: 30px;
+    }
+
+    &__pricebucket {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .item__bucket {
+            background-color: #FFD400;
+            font-weight: bold;
+            padding: 10px 25px;
+            margin-left: 25px;
+        }
+
+        .item__price {
+
+            .item__oldprice {
+                color: gray;
+                text-decoration: line-through;
+                margin: 2px 0;
+            }
+
+            .item__curent {
+                font-size: 16px;
+                font-weight: 600;
+                margin: 2px 0;
+
+                span {
+                    font-size: 10px;
+                    vertical-align: 5px;
+                }
+            }
+        }
+    }
+}
